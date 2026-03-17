@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -29,6 +30,35 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        {/* Statcounter */}
+        <Script
+          id="statcounter"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              var sc_project=13211083;
+              var sc_invisible=1;
+              var sc_security="6cca2c09";
+            `,
+          }}
+        />
+        <Script
+          src="https://www.statcounter.com/counter/counter.js"
+          strategy="afterInteractive"
+          async
+        />
+        <noscript>
+          <div className="statcounter">
+            <a title="Web Analytics" href="https://statcounter.com/" target="_blank">
+              <img
+                className="statcounter"
+                src="https://c.statcounter.com/13211083/0/6cca2c09/1/"
+                alt="Web Analytics"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </a>
+          </div>
+        </noscript>
       </body>
     </html>
   );
