@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XtremePlugins — Premium Freemium Plugins for WooCommerce, Shopify & WordPress</title>
+  <meta name="description" content="Supercharge your store with premium freemium plugins for WooCommerce, Shopify and WordPress. Used by 5,000+ store owners.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --cyan: #00e5ff;
+      --magenta: #e040fb;
+      --purple: #7c3aed;
+      --purple-deep: #0d0021;
+      --gold: #fbbf24;
+      --glass-bg: rgba(255, 255, 255, 0.04);
+      --glass-border: rgba(120, 100, 255, 0.18);
+      --glass-border-bright: rgba(120, 100, 255, 0.35);
+      --text-primary: rgba(255, 255, 255, 0.95);
+      --text-secondary: rgba(255, 255, 255, 0.6);
+      --section-gap: 70px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Exo 2', sans-serif;
+      background: var(--purple-deep);
+      color: var(--text-primary);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* ═══ WARP-SPEED BACKGROUND ═══ */
+    .warp-bg {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+      background: radial-gradient(ellipse at 50% 40%, #1a0040 0%, #0d0021 50%, #050010 100%);
+    }
+
+    .warp-bg .streaks {
+      position: absolute;
+      inset: -50%;
+      background: conic-gradient(
+        from 0deg at 50% 50%,
+        transparent 0deg, rgba(0,229,255,0.04) 2deg, transparent 4deg,
+        transparent 8deg, rgba(180,80,255,0.03) 10deg, transparent 12deg,
+        transparent 18deg, rgba(224,64,251,0.04) 20deg, transparent 22deg,
+        transparent 30deg, rgba(0,229,255,0.03) 32deg, transparent 34deg,
+        transparent 42deg, rgba(180,80,255,0.04) 44deg, transparent 46deg,
+        transparent 55deg, rgba(0,229,255,0.03) 57deg, transparent 59deg,
+        transparent 68deg, rgba(224,64,251,0.03) 70deg, transparent 72deg,
+        transparent 82deg, rgba(0,229,255,0.04) 84deg, transparent 86deg,
+        transparent 95deg, rgba(180,80,255,0.03) 97deg, transparent 99deg,
+        transparent 110deg, rgba(224,64,251,0.04) 112deg, transparent 114deg,
+        transparent 125deg, rgba(0,229,255,0.03) 127deg, transparent 129deg,
+        transparent 140deg, rgba(180,80,255,0.04) 142deg, transparent 144deg,
+        transparent 156deg, rgba(0,229,255,0.03) 158deg, transparent 160deg,
+        transparent 172deg, rgba(224,64,251,0.04) 174deg, transparent 176deg,
+        transparent 190deg, rgba(0,229,255,0.04) 192deg, transparent 194deg,
+        transparent 208deg, rgba(180,80,255,0.03) 210deg, transparent 212deg,
+        transparent 226deg, rgba(224,64,251,0.03) 228deg, transparent 230deg,
+        transparent 245deg, rgba(0,229,255,0.04) 247deg, transparent 249deg,
+        transparent 264deg, rgba(180,80,255,0.04) 266deg, transparent 268deg,
+        transparent 282deg, rgba(224,64,251,0.03) 284deg, transparent 286deg,
+        transparent 300deg, rgba(0,229,255,0.04) 302deg, transparent 304deg,
+        transparent 318deg, rgba(180,80,255,0.03) 320deg, transparent 322deg,
+        transparent 338deg, rgba(224,64,251,0.04) 340deg, transparent 342deg,
+        transparent 356deg, rgba(0,229,255,0.03) 358deg, transparent 360deg
+      );
+      animation: rotateStreaks 120s linear infinite;
+    }
+
+    @keyframes rotateStreaks { to { transform: rotate(360deg); } }
+
+    .warp-bg .streaks-bright {
+      position: absolute;
+      inset: -30%;
+      background: conic-gradient(
+        from 45deg at 50% 50%,
+        transparent 0deg, rgba(0,229,255,0.07) 1deg, transparent 3deg,
+        transparent 15deg, rgba(224,64,251,0.06) 16deg, transparent 18deg,
+        transparent 35deg, rgba(120,60,255,0.05) 36deg, transparent 38deg,
+        transparent 55deg, rgba(0,229,255,0.06) 56deg, transparent 58deg,
+        transparent 78deg, rgba(224,64,251,0.07) 79deg, transparent 81deg,
+        transparent 100deg, rgba(120,60,255,0.05) 101deg, transparent 103deg,
+        transparent 125deg, rgba(0,229,255,0.06) 126deg, transparent 128deg,
+        transparent 150deg, rgba(224,64,251,0.06) 151deg, transparent 153deg,
+        transparent 175deg, rgba(120,60,255,0.07) 176deg, transparent 178deg,
+        transparent 200deg, rgba(0,229,255,0.06) 201deg, transparent 203deg,
+        transparent 225deg, rgba(224,64,251,0.05) 226deg, transparent 228deg,
+        transparent 250deg, rgba(120,60,255,0.06) 251deg, transparent 253deg,
+        transparent 278deg, rgba(0,229,255,0.07) 279deg, transparent 281deg,
+        transparent 305deg, rgba(224,64,251,0.06) 306deg, transparent 308deg,
+        transparent 335deg, rgba(120,60,255,0.05) 336deg, transparent 338deg,
+        transparent 360deg
+      );
+      animation: rotateStreaks 90s linear infinite reverse;
+    }
+
+    .warp-bg .center-glow {
+      position: absolute;
+      top: 0; left: 50%; transform: translateX(-50%);
+      width: 900px; height: 650px;
+      background: radial-gradient(ellipse at center, rgba(100,40,200,0.28) 0%, rgba(60,20,160,0.12) 40%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .warp-bg .stars { position: absolute; inset: 0; }
+
+    .star {
+      position: absolute;
+      border-radius: 50%;
+      background: white;
+      animation: twinkle ease-in-out infinite alternate;
+    }
+
+    @keyframes twinkle { 0% { opacity: 0.15; } 100% { opacity: 0.7; } }
+
+    /* ═══ LAYOUT ═══ */
+    .page { position: relative; z-index: 1; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+    /* ═══ TOP NAVBAR ═══ */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 0 24px;
+      background: rgba(13, 0, 33, 0.7);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .navbar-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-brand {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 900;
+      font-size: 1.1rem;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s;
+      letter-spacing: 0.01em;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #fff;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .nav-login {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-login:hover { color: #fff; }
+
+    .nav-cta {
+      padding: 8px 20px;
+      background: linear-gradient(135deg, var(--cyan), var(--purple));
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-family: 'Exo 2', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      transition: box-shadow 0.3s;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-cta:hover {
+      box-shadow: 0 4px 20px rgba(0, 229, 255, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+    }
+
+    /* ═══ HERO ═══ */
+    .hero {
+      text-align: center;
+      padding: 30px 0 10px;
+    }
+
+    .hero-logo {
+      width: min(320px, 70vw);
+      height: auto;
+      filter: drop-shadow(0 0 40px rgba(0,229,255,0.2)) drop-shadow(0 0 80px rgba(120,40,200,0.15));
+      animation: heroIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    @keyframes heroIn {
+      0% { opacity: 0; transform: scale(0.8) translateY(30px); }
+      100% { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    .hero-heading {
+      font-family: 'Exo 2', sans-serif;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 20px auto 28px;
+      max-width: 550px;
+      animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+    }
+
+    .hero-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
+      margin-bottom: 50px;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 14px 32px;
+      background: linear-gradient(135deg, var(--cyan), #6366f1);
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      font-family: 'Exo 2', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      box-shadow: 0 4px 25px rgba(0, 229, 255, 0.25);
+      letter-spacing: 0.02em;
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 6px 35px rgba(0, 229, 255, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      padding: 14px 32px;
+      background: transparent;
+      border: 1px solid var(--glass-border-bright);
+      border-radius: 10px;
+      color: var(--text-primary);
+      font-family: 'Exo 2', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(120, 100, 255, 0.5);
+    }
+
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ═══ SOCIAL PROOF BAR ═══ */
+    .social-proof {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 28px 36px 24px;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      backdrop-filter: blur(30px) saturate(1.2);
+      -webkit-backdrop-filter: blur(30px) saturate(1.2);
+      text-align: center;
+      animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.06);
+    }
+
+    .social-proof h3 {
+      font-family: 'Exo 2', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .stars-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      margin-bottom: 18px;
+    }
+
+    .stars-row .rating-num {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-right: 6px;
+    }
+
+    .stars-row .star-icon {
+      color: var(--gold);
+      font-size: 1rem;
+    }
+
+    .stars-row .rating-text {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-left: 8px;
+    }
+
+    .platforms {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .platform-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 20px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: 0.02em;
+    }
+
+    .platform-badge svg { height: 32px; width: auto; flex-shrink: 0; }
+    .platform-badge svg.logo-wide { height: 32px; }
+
+    /* ═══ SECTION HEADINGS ═══ */
+    .section-title {
+      font-family: 'Exo 2', sans-serif;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-divider {
+      width: 100%;
+      height: 1px;
+      margin: var(--section-gap) 0;
+      background: linear-gradient(90deg, transparent, rgba(120,60,255,0.3), rgba(0,229,255,0.3), rgba(224,64,251,0.3), transparent);
+    }
+
+    /* ═══ FEATURE CARDS ═══ */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    @media (max-width: 768px) {
+      .features-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+    }
+
+    .feature-card {
+      position: relative;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 26px 22px 22px;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: 0 4px 30px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.05);
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .feature-card:hover {
+      border-color: var(--glass-border-bright);
+      box-shadow: 0 4px 30px rgba(0,0,0,0.25), 0 0 40px rgba(120,60,255,0.08), inset 0 1px 0 rgba(255,255,255,0.08);
+      transform: translateY(-4px);
+    }
+
+    .feature-card h4 {
+      font-family: 'Exo 2', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      font-style: italic;
+    }
+
+    .feature-card .desc {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+
+    /* Screenshot area with mock plugin UI */
+    .feature-card .screenshot {
+      width: 100%;
+      aspect-ratio: 16/10;
+      border-radius: 10px;
+      overflow: hidden;
+      background: linear-gradient(135deg, rgba(15,8,40,0.9), rgba(25,12,50,0.7));
+      border: 1px solid rgba(120,100,255,0.12);
+      margin-bottom: 16px;
+      position: relative;
+    }
+
+    .mock-plugin {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      gap: 6px;
+      padding: 8px;
+    }
+
+    .mock-sidebar {
+      width: 35%;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .mock-sidebar .mock-title {
+      height: 10px;
+      width: 80%;
+      border-radius: 3px;
+      background: rgba(255,255,255,0.12);
+    }
+
+    .mock-sidebar .mock-subtitle {
+      height: 6px;
+      width: 100%;
+      border-radius: 3px;
+      background: rgba(255,255,255,0.06);
+    }
+
+    .mock-sidebar .mock-btn {
+      height: 14px;
+      width: 70%;
+      border-radius: 4px;
+      margin-top: 4px;
+    }
+
+    .mock-sidebar .mock-btn.cyan { background: linear-gradient(90deg, rgba(0,229,255,0.4), rgba(100,100,241,0.3)); }
+    .mock-sidebar .mock-btn.magenta { background: linear-gradient(90deg, rgba(224,64,251,0.4), rgba(100,100,241,0.3)); }
+    .mock-sidebar .mock-btn.purple { background: linear-gradient(90deg, rgba(120,60,255,0.4), rgba(0,229,255,0.3)); }
+
+    .mock-main {
+      flex: 1;
+      border-radius: 6px;
+      border: 1px solid rgba(120,100,255,0.08);
+      background: rgba(120,100,255,0.03);
+      padding: 6px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .mock-main .mock-row {
+      height: 5px;
+      border-radius: 2px;
+      background: rgba(120,100,255,0.08);
+    }
+
+    .mock-main .mock-block {
+      flex: 1;
+      border-radius: 4px;
+      border: 1px solid rgba(120,100,255,0.06);
+      background: rgba(120,100,255,0.02);
+    }
+
+    .plugin-name {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 2px;
+    }
+
+    .feature-card .price {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      margin-top: auto;
+    }
+
+    .btn-buy {
+      display: inline-block;
+      padding: 11px 26px;
+      background: linear-gradient(135deg, var(--cyan), #6366f1);
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-family: 'Exo 2', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-decoration: none;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,229,255,0.2);
+      align-self: flex-start;
+    }
+
+    .btn-buy:hover {
+      box-shadow: 0 4px 30px rgba(0,229,255,0.35);
+      transform: translateY(-2px);
+    }
+
+    /* ═══ PRICING ═══ */
+    .pricing-section { padding-bottom: 80px; }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    @media (max-width: 768px) {
+      .pricing-grid { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; }
+    }
+
+    .pricing-card {
+      position: relative;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 36px 28px 32px;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      text-align: center;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.05);
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    }
+
+    .pricing-card:hover {
+      border-color: var(--glass-border-bright);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 40px rgba(0,0,0,0.3), 0 0 40px rgba(120,60,255,0.08);
+    }
+
+    .pricing-card.featured {
+      border-color: rgba(0,229,255,0.3);
+      box-shadow: 0 4px 30px rgba(0,0,0,0.25), 0 0 60px rgba(0,229,255,0.08);
+    }
+
+    .pricing-card.featured::before {
+      content: '';
+      position: absolute;
+      top: -1px; left: 50%; transform: translateX(-50%);
+      width: 120px; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+    }
+
+    .pricing-card .tier-name {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+    }
+
+    .pricing-card .tier-price {
+      font-family: 'Exo 2', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .pricing-card .tier-period {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+    }
+
+    .pricing-card .tier-features {
+      list-style: none;
+      margin-bottom: 28px;
+      text-align: left;
+    }
+
+    .pricing-card .tier-features li {
+      padding: 7px 0;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .pricing-card .tier-features li::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--cyan);
+      flex-shrink: 0;
+      box-shadow: 0 0 6px var(--cyan);
+    }
+
+    .btn-tier {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      border: 1px solid var(--glass-border);
+      border-radius: 10px;
+      background: rgba(255,255,255,0.03);
+      color: var(--text-primary);
+      font-family: 'Exo 2', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-decoration: none;
+      letter-spacing: 0.03em;
+    }
+
+    .btn-tier:hover {
+      background: rgba(255,255,255,0.07);
+      border-color: var(--glass-border-bright);
+    }
+
+    .btn-tier.primary {
+      background: linear-gradient(135deg, var(--cyan), #6366f1);
+      border: none;
+      box-shadow: 0 4px 20px rgba(0,229,255,0.2);
+    }
+
+    .btn-tier.primary:hover {
+      box-shadow: 0 4px 30px rgba(0,229,255,0.35);
+    }
+
+    /* ═══ FOOTER ═══ */
+    .site-footer {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 40px 24px 32px;
+      margin-top: 20px;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-brand img {
+      height: 48px;
+      width: auto;
+      filter: drop-shadow(0 0 20px rgba(0,229,255,0.15));
+    }
+
+    .footer-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      text-align: right;
+    }
+
+    .footer-nav-row {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .footer-nav a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-nav a:hover { color: #fff; }
+
+    .footer-copy {
+      text-align: center;
+      margin-top: 32px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.04);
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.2);
+      font-family: 'Orbitron', sans-serif;
+      letter-spacing: 0.06em;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (max-width: 600px) {
+      .footer-inner { flex-direction: column; align-items: center; }
+      .footer-nav { text-align: center; }
+      .footer-nav-row { justify-content: center; }
+    }
+
+    /* ═══ SCROLL ANIMATIONS ═══ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal.d1 { transition-delay: 0.1s; }
+    .reveal.d2 { transition-delay: 0.2s; }
+    .reveal.d3 { transition-delay: 0.3s; }
+  </style>
+</head>
+<body>
+
+  <!-- Warp-speed background -->
+  <div class="warp-bg">
+    <div class="streaks"></div>
+    <div class="streaks-bright"></div>
+    <div class="center-glow"></div>
+    <div class="stars" id="stars"></div>
+  </div>
+
+  <!-- Page content -->
+  <div class="page">
+
+    <!-- ═══ NAVBAR ═══ -->
+    <nav class="navbar">
+      <div class="navbar-inner">
+        <div class="nav-left">
+          <a href="#" class="nav-brand">X</a>
+          <ul class="nav-links">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#plugins">Plugins</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#blog">Blog</a></li>
+          </ul>
+        </div>
+        <div class="nav-right">
+          <a href="#" class="nav-login">Log In</a>
+          <a href="#" class="nav-cta">Get Started</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ═══ HERO ═══ -->
+    <section class="hero">
+      <div class="container">
+        <img class="hero-logo" src="/src/img/logo.png" alt="XP — Xtreme Plugins" />
+        <h1 class="hero-heading">Supercharge Your Store with Xtreme Plugins</h1>
+        <div class="hero-buttons">
+          <a href="#plugins" class="btn-primary">Get Plugins</a>
+          <a href="#" class="btn-outline">View Demo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SOCIAL PROOF ═══ -->
+    <section class="container" style="margin-bottom: var(--section-gap);">
+      <div class="social-proof">
+        <h3>Used by 5,000+ store owners</h3>
+        <div class="stars-row">
+          <span class="rating-num">4.9</span>
+          <span class="star-icon">&#9733;</span>
+          <span class="star-icon">&#9733;</span>
+          <span class="star-icon">&#9733;</span>
+          <span class="star-icon">&#9733;</span>
+          <span class="star-icon">&#9733;</span>
+          <span class="rating-text">5/5 &middot; 1,200+ reviews</span>
+        </div>
+        <div class="platforms">
+          <div class="platform-badge">
+            <svg class="logo-wide" viewBox="0.5 12.5 31 6" fill="#FFF"><path d="M15.103 14.682c0.292 0 0.443 0.273 0.443 0.826 0.002 0.029 0.003 0.063 0.003 0.098 0 0.215-0.046 0.42-0.13 0.604l0.004-0.009c-0.066 0.105-0.181 0.174-0.312 0.174-0.006 0-0.011-0-0.017-0l0.001 0c-0.003 0-0.007 0-0.010 0-0.126 0-0.235-0.070-0.292-0.172l-0.001-0.002c-0.070-0.17-0.111-0.368-0.111-0.575 0-0.045 0.002-0.090 0.006-0.135l-0 0.006c0-0.546 0.138-0.814 0.416-0.814zM9.56 14.675c-0.165 0.020-0.303 0.121-0.374 0.261l-0.001 0.003c-0.157 0.217-0.25 0.489-0.25 0.783 0 0.006 0 0.012 0 0.018v-0.001c0.002 0.137 0.029 0.267 0.078 0.386l-0.003-0.007c0.061 0.163 0.146 0.248 0.245 0.269 0.011 0.001 0.024 0.002 0.036 0.002 0.12 0 0.227-0.052 0.301-0.134l0-0c0.163-0.161 0.276-0.373 0.315-0.609l0.001-0.006c0.017-0.092 0.028-0.198 0.029-0.307v-0.001c-0.002-0.137-0.029-0.267-0.078-0.386l0.003 0.007c-0.063-0.163-0.145-0.248-0.245-0.269-0.017-0.004-0.036-0.007-0.056-0.007l-0.001-0zM6.953 14.675c-0.165 0.020-0.304 0.121-0.375 0.261l-0.001 0.003c-0.157 0.217-0.25 0.489-0.25 0.783 0 0.006 0 0.012 0 0.018v-0.001c0.002 0.137 0.029 0.267 0.078 0.386l-0.003-0.007c0.061 0.163 0.146 0.248 0.245 0.269 0.011 0.001 0.024 0.002 0.036 0.002 0.12 0 0.227-0.052 0.301-0.134l0-0c0.163-0.161 0.276-0.373 0.315-0.609l0.001-0.006c0.018-0.089 0.029-0.191 0.029-0.295 0-0.005-0-0.009-0-0.014v0.001c-0.002-0.137-0.029-0.267-0.078-0.386l0.003 0.007c-0.063-0.163-0.145-0.248-0.245-0.269-0.017-0.004-0.036-0.007-0.056-0.007l-0.001-0zM26.003 14.661c0.014-0.001 0.030-0.002 0.047-0.002 0.127 0 0.246 0.034 0.348 0.093l-0.003-0.002c0.071 0.060 0.116 0.149 0.116 0.248 0 0.013-0.001 0.025-0.002 0.037l0-0.002q0 0.293-0.506 0.3v-0.675zM23.469 14.12v2.834h1.552v-0.605h-0.785v-0.521h0.677v-0.586h-0.676v-0.519h0.779v-0.603zM29.468 14.115v2.834h1.552v-0.605h-0.789v-0.518h0.676v-0.586h-0.676v-0.521h0.784v-0.605zM25.241 14.115v2.834h0.765v-1.29h0.015l0.618 1.289h0.807l-0.612-1.275c0.271-0.118 0.459-0.382 0.463-0.69v-0.001c0-0.007 0-0.016 0-0.024 0-0.25-0.123-0.472-0.311-0.607l-0.002-0.002c-0.219-0.147-0.488-0.235-0.778-0.235-0.026 0-0.051 0.001-0.077 0.002l0.004-0zM20.249 14.115l-0.363 2.834h0.725l0.195-1.951 0.496 1.951h0.516l0.469-1.946 0.207 1.946h0.755l-0.382-2.834h-0.988l-0.149 0.636c-0.038 0.163-0.075 0.33-0.108 0.501l-0.083 0.441c-0.079-0.441-0.188-0.965-0.325-1.577zM16.785 14.115l-0.363 2.834h0.725l0.195-1.951 0.494 1.951h0.516l0.474-1.946 0.205 1.946h0.755l-0.381-2.834h-0.99l-0.15 0.636c-0.038 0.163-0.075 0.33-0.109 0.501l-0.084 0.44q-0.145-0.792-0.323-1.577zM28.798 14.040c-0.017-0.001-0.038-0.001-0.058-0.001-0.778 0-1.409 0.631-1.409 1.409 0 0.017 0 0.034 0.001 0.051l-0-0.002c-0.001 0.021-0.002 0.045-0.002 0.069 0 0.4 0.157 0.764 0.413 1.033l-0.001-0.001c0.262 0.261 0.622 0.422 1.021 0.422 0.020 0 0.040-0 0.060-0.001l-0.003 0c0.155-0.002 0.304-0.025 0.444-0.068l-0.011 0.003v-0.676c-0.113 0.037-0.243 0.060-0.377 0.064l-0.002 0c-0.007 0-0.016 0-0.025 0-0.199 0-0.378-0.085-0.503-0.221l-0-0c-0.125-0.164-0.2-0.371-0.2-0.597 0-0.222 0.073-0.427 0.197-0.592l-0.002 0.003c0.115-0.139 0.288-0.227 0.481-0.227 0.006 0 0.011 0 0.017 0l-0.001-0c0.148 0.001 0.291 0.023 0.426 0.064l-0.011-0.003v-0.672c-0.132-0.036-0.283-0.056-0.439-0.056-0.005 0-0.010 0-0.016 0h0.001zM13.26 14.040c-0.017-0.001-0.038-0.001-0.058-0.001-0.778 0-1.409 0.631-1.409 1.409 0 0.017 0 0.034 0.001 0.051l-0-0.002c-0.001 0.021-0.002 0.045-0.002 0.069 0 0.4 0.157 0.764 0.413 1.033l-0.001-0.001c0.261 0.261 0.622 0.422 1.020 0.422 0.020 0 0.040-0 0.061-0.001l-0.003 0c0.155-0.002 0.304-0.025 0.444-0.068l-0.011 0.003v-0.676c-0.113 0.037-0.243 0.060-0.377 0.064l-0.002 0c-0.007 0-0.016 0-0.025 0-0.199 0-0.378-0.085-0.503-0.221l-0-0c-0.125-0.164-0.2-0.371-0.2-0.597 0-0.222 0.073-0.427 0.197-0.592l-0.002 0.003c0.115-0.139 0.288-0.227 0.481-0.227 0.006 0 0.011 0 0.017 0l-0.001-0c0.149 0.001 0.291 0.023 0.426 0.064l-0.011-0.003v-0.672c-0.132-0.036-0.283-0.056-0.44-0.056-0.005 0-0.010 0-0.016 0h0.001zM15.095 14.037c-0.017-0.001-0.036-0.001-0.056-0.001-0.335 0-0.636 0.147-0.842 0.381l-0.001 0.001c-0.202 0.266-0.324 0.602-0.324 0.967 0 0.037 0.001 0.073 0.004 0.109l-0-0.005c-0.002 0.035-0.004 0.075-0.004 0.116 0 0.382 0.121 0.735 0.328 1.023l-0.004-0.005c0.208 0.244 0.516 0.398 0.860 0.398 0.025 0 0.050-0.001 0.075-0.002l-0.003 0c0.018 0.001 0.040 0.002 0.061 0.002 0.341 0 0.645-0.154 0.849-0.395l0.001-0.002c0.202-0.278 0.324-0.625 0.324-1.002 0-0.036-0.001-0.073-0.003-0.109l0 0.005c0.002-0.032 0.003-0.069 0.003-0.106 0-0.374-0.123-0.72-0.332-0.998l0.003 0.004c-0.216-0.236-0.525-0.383-0.868-0.383-0.025 0-0.050 0.001-0.074 0.002l0.003-0zM9.541 13.979c0.080 0 0.158 0.009 0.232 0.026l-0.007-0.001c0.288 0.055 0.526 0.234 0.661 0.478l0.002 0.005c0.127 0.221 0.201 0.485 0.201 0.768 0 0.018-0 0.036-0.001 0.054l0-0.003c0 0.006 0 0.013 0 0.021 0 0.427-0.121 0.827-0.33 1.166l0.005-0.010c-0.182 0.366-0.549 0.616-0.976 0.626l-0.001 0c-0.081-0.002-0.158-0.011-0.233-0.029l0.007 0.001c-0.288-0.055-0.527-0.233-0.662-0.476l-0.002-0.005c-0.126-0.225-0.201-0.493-0.201-0.779 0-0.016 0-0.032 0.001-0.048l-0 0.002c-0-0.006-0-0.013-0-0.021 0-0.426 0.121-0.824 0.331-1.162l-0.005 0.009c0.183-0.365 0.549-0.613 0.975-0.623l0.001-0zM6.933 13.979c0.080 0 0.158 0.009 0.232 0.026l-0.007-0.001c0.288 0.057 0.525 0.235 0.661 0.478l0.003 0.005c0.127 0.221 0.202 0.487 0.202 0.770 0 0.017-0 0.034-0.001 0.051l0-0.002c0 0.005 0 0.012 0 0.018 0 0.428-0.121 0.829-0.331 1.168l0.005-0.010c-0.182 0.366-0.549 0.616-0.976 0.626l-0.001 0c-0.081-0.002-0.158-0.011-0.233-0.029l0.007 0.001c-0.288-0.055-0.527-0.233-0.662-0.476l-0.003-0.005c-0.125-0.224-0.199-0.491-0.199-0.775 0-0.018 0-0.035 0.001-0.053l-0 0.003c-0-0.008-0-0.016-0-0.025 0-0.424 0.12-0.821 0.329-1.157l-0.005 0.009c0.183-0.365 0.549-0.613 0.975-0.623l0.001-0zM5.315 13.528h0.038c0.086 0.002 0.164 0.033 0.225 0.084l-0.001-0c0.073 0.056 0.122 0.14 0.129 0.237l0 0.001c0.001 0.009 0.001 0.019 0.001 0.030 0 0.062-0.016 0.121-0.043 0.172l0.001-0.002c-0.2 0.438-0.343 0.945-0.401 1.478l-0.002 0.022c-0.077 0.41-0.121 0.883-0.121 1.365 0 0.078 0.001 0.155 0.003 0.232l-0-0.011c0.002 0.016 0.003 0.035 0.003 0.054 0 0.080-0.019 0.156-0.053 0.222l0.001-0.003c-0.041 0.084-0.123 0.143-0.219 0.15l-0.001 0c-0.001 0-0.001 0-0.002 0-0.132 0-0.249-0.060-0.327-0.154l-0.001-0.001c-0.433-0.488-0.753-1.085-0.914-1.744l-0.006-0.028q-0.406 0.798-0.598 1.198c-0.245 0.471-0.454 0.711-0.628 0.723-0.113 0.009-0.208-0.086-0.292-0.285-0.295-0.901-0.535-1.97-0.676-3.069l-0.009-0.090c-0.003-0.017-0.005-0.037-0.005-0.058 0-0.083 0.027-0.159 0.073-0.221l-0.001 0.001c0.061-0.078 0.156-0.128 0.262-0.128 0 0 0.001 0 0.001 0h-0c0.018-0.004 0.038-0.006 0.059-0.006 0.167 0 0.302 0.135 0.302 0.302 0 0.001 0 0.001 0 0.002v-0c0.129 0.87 0.272 1.607 0.421 2.21l0.91-1.736c0.052-0.132 0.169-0.228 0.311-0.249l0.002-0c0.183-0.013 0.297 0.104 0.342 0.35 0.097 0.541 0.233 1.018 0.412 1.474l-0.018-0.052c0.043-0.837 0.242-1.618 0.567-2.328l-0.016 0.040c0.050-0.105 0.152-0.178 0.272-0.184l0.001-0zM1.924 12.971c0 0 0 0 0 0-0.521 0-0.944 0.423-0.944 0.944 0 0.002 0 0.004 0 0.005v-0 3.16c0 0 0 0.001 0 0.001 0 0.523 0.424 0.947 0.947 0.947 0 0 0.001 0 0.001 0h3.924l1.791 1-0.408-1h2.97c0 0 0.001 0 0.001 0 0.523 0 0.948-0.424 0.948-0.948 0-0 0-0.001 0-0.001v0-3.16c0-0 0-0.001 0-0.001 0-0.523-0.424-0.948-0.948-0.948-0 0-0.001 0-0.001 0h0z" fill="#9B5C8F"/><path d="M15.103 14.682c0.292 0 0.443 0.273 0.443 0.826 0.002 0.029 0.003 0.063 0.003 0.098 0 0.215-0.046 0.42-0.13 0.604l0.004-0.009c-0.066 0.105-0.181 0.174-0.312 0.174-0.006 0-0.011-0-0.017-0l0.001 0c-0.003 0-0.007 0-0.010 0-0.126 0-0.235-0.070-0.292-0.172l-0.001-0.002c-0.070-0.17-0.111-0.368-0.111-0.575 0-0.045 0.002-0.090 0.006-0.135l-0 0.006c0-0.546 0.138-0.814 0.416-0.814zM9.56 14.675c-0.165 0.020-0.303 0.121-0.374 0.261l-0.001 0.003c-0.157 0.217-0.25 0.489-0.25 0.783 0 0.006 0 0.012 0 0.018v-0.001c0.002 0.137 0.029 0.267 0.078 0.386l-0.003-0.007c0.061 0.163 0.146 0.248 0.245 0.269 0.011 0.001 0.024 0.002 0.036 0.002 0.12 0 0.227-0.052 0.301-0.134l0-0c0.163-0.161 0.276-0.373 0.315-0.609l0.001-0.006c0.017-0.092 0.028-0.198 0.029-0.307v-0.001c-0.002-0.137-0.029-0.267-0.078-0.386l0.003 0.007c-0.063-0.163-0.145-0.248-0.245-0.269-0.017-0.004-0.036-0.007-0.056-0.007l-0.001-0zM6.953 14.675c-0.165 0.020-0.304 0.121-0.375 0.261l-0.001 0.003c-0.157 0.217-0.25 0.489-0.25 0.783 0 0.006 0 0.012 0 0.018v-0.001c0.002 0.137 0.029 0.267 0.078 0.386l-0.003-0.007c0.061 0.163 0.146 0.248 0.245 0.269 0.011 0.001 0.024 0.002 0.036 0.002 0.12 0 0.227-0.052 0.301-0.134l0-0c0.163-0.161 0.276-0.373 0.315-0.609l0.001-0.006c0.018-0.089 0.029-0.191 0.029-0.295 0-0.005-0-0.009-0-0.014v0.001c-0.002-0.137-0.029-0.267-0.078-0.386l0.003 0.007c-0.063-0.163-0.145-0.248-0.245-0.269-0.017-0.004-0.036-0.007-0.056-0.007l-0.001-0zM5.315 13.528h0.038c0.086 0.002 0.164 0.033 0.225 0.084l-0.001-0c0.073 0.056 0.122 0.14 0.129 0.237l0 0.001c0.001 0.009 0.001 0.019 0.001 0.030 0 0.062-0.016 0.121-0.043 0.172l0.001-0.002c-0.2 0.438-0.343 0.945-0.401 1.478l-0.002 0.022c-0.077 0.41-0.121 0.883-0.121 1.365 0 0.078 0.001 0.155 0.003 0.232l-0-0.011c0.002 0.016 0.003 0.035 0.003 0.054 0 0.080-0.019 0.156-0.053 0.222l0.001-0.003c-0.041 0.084-0.123 0.143-0.219 0.15l-0.001 0c-0.001 0-0.001 0-0.002 0-0.132 0-0.249-0.060-0.327-0.154l-0.001-0.001c-0.433-0.488-0.753-1.085-0.914-1.744l-0.006-0.028q-0.406 0.798-0.598 1.198c-0.245 0.471-0.454 0.711-0.628 0.723-0.113 0.009-0.208-0.086-0.292-0.285-0.295-0.901-0.535-1.97-0.676-3.069l-0.009-0.090c-0.003-0.017-0.005-0.037-0.005-0.058 0-0.083 0.027-0.159 0.073-0.221l-0.001 0.001c0.061-0.078 0.156-0.128 0.262-0.128 0 0 0.001 0 0.001 0h-0c0.018-0.004 0.038-0.006 0.059-0.006 0.167 0 0.302 0.135 0.302 0.302 0 0.001 0 0.001 0 0.002v-0c0.129 0.87 0.272 1.607 0.421 2.21l0.91-1.736c0.052-0.132 0.169-0.228 0.311-0.249l0.002-0c0.183-0.013 0.297 0.104 0.342 0.35 0.097 0.541 0.233 1.018 0.412 1.474l-0.018-0.052c0.043-0.837 0.242-1.618 0.567-2.328l-0.016 0.040c0.050-0.105 0.152-0.178 0.272-0.184l0.001-0zM1.924 12.971c0 0 0 0 0 0-0.521 0-0.944 0.423-0.944 0.944 0 0.002 0 0.004 0 0.005v-0 3.16c0 0 0 0.001 0 0.001 0 0.523 0.424 0.947 0.947 0.947 0 0 0.001 0 0.001 0h3.924l1.791 1-0.408-1h2.97c0 0 0.001 0 0.001 0 0.523 0 0.948-0.424 0.948-0.948 0-0 0-0.001 0-0.001v0-3.16c0-0 0-0.001 0-0.001 0-0.523-0.424-0.948-0.948-0.948-0 0-0.001 0-0.001 0h0z" fill="#FFF"/><path d="M26.003 14.661c0.014-0.001 0.030-0.002 0.047-0.002 0.127 0 0.246 0.034 0.348 0.093l-0.003-0.002c0.071 0.060 0.116 0.149 0.116 0.248 0 0.013-0.001 0.025-0.002 0.037l0-0.002q0 0.293-0.506 0.3v-0.675zM23.469 14.12v2.834h1.552v-0.605h-0.785v-0.521h0.677v-0.586h-0.676v-0.519h0.779v-0.603zM29.468 14.115v2.834h1.552v-0.605h-0.789v-0.518h0.676v-0.586h-0.676v-0.521h0.784v-0.605zM25.241 14.115v2.834h0.765v-1.29h0.015l0.618 1.289h0.807l-0.612-1.275c0.271-0.118 0.459-0.382 0.463-0.69v-0.001c0-0.007 0-0.016 0-0.024 0-0.25-0.123-0.472-0.311-0.607l-0.002-0.002c-0.219-0.147-0.488-0.235-0.778-0.235-0.026 0-0.051 0.001-0.077 0.002l0.004-0zM20.249 14.115l-0.363 2.834h0.725l0.195-1.951 0.496 1.951h0.516l0.469-1.946 0.207 1.946h0.755l-0.382-2.834h-0.988l-0.149 0.636c-0.038 0.163-0.075 0.33-0.108 0.501l-0.083 0.441c-0.079-0.441-0.188-0.965-0.325-1.577zM16.785 14.115l-0.363 2.834h0.725l0.195-1.951 0.494 1.951h0.516l0.474-1.946 0.205 1.946h0.755l-0.381-2.834h-0.99l-0.15 0.636c-0.038 0.163-0.075 0.33-0.109 0.501l-0.084 0.44q-0.145-0.792-0.323-1.577zM28.798 14.040c-0.017-0.001-0.038-0.001-0.058-0.001-0.778 0-1.409 0.631-1.409 1.409 0 0.017 0 0.034 0.001 0.051l-0-0.002c-0.001 0.021-0.002 0.045-0.002 0.069 0 0.4 0.157 0.764 0.413 1.033l-0.001-0.001c0.262 0.261 0.622 0.422 1.021 0.422 0.020 0 0.040-0 0.060-0.001l-0.003 0c0.155-0.002 0.304-0.025 0.444-0.068l-0.011 0.003v-0.676c-0.113 0.037-0.243 0.060-0.377 0.064l-0.002 0c-0.007 0-0.016 0-0.025 0-0.199 0-0.378-0.085-0.503-0.221l-0-0c-0.125-0.164-0.2-0.371-0.2-0.597 0-0.222 0.073-0.427 0.197-0.592l-0.002 0.003c0.115-0.139 0.288-0.227 0.481-0.227 0.006 0 0.011 0 0.017 0l-0.001-0c0.148 0.001 0.291 0.023 0.426 0.064l-0.011-0.003v-0.672c-0.132-0.036-0.283-0.056-0.439-0.056-0.005 0-0.010 0-0.016 0h0.001zM13.26 14.040c-0.017-0.001-0.038-0.001-0.058-0.001-0.778 0-1.409 0.631-1.409 1.409 0 0.017 0 0.034 0.001 0.051l-0-0.002c-0.001 0.021-0.002 0.045-0.002 0.069 0 0.4 0.157 0.764 0.413 1.033l-0.001-0.001c0.261 0.261 0.622 0.422 1.020 0.422 0.020 0 0.040-0 0.061-0.001l-0.003 0c0.155-0.002 0.304-0.025 0.444-0.068l-0.011 0.003v-0.676c-0.113 0.037-0.243 0.060-0.377 0.064l-0.002 0c-0.007 0-0.016 0-0.025 0-0.199 0-0.378-0.085-0.503-0.221l-0-0c-0.125-0.164-0.2-0.371-0.2-0.597 0-0.222 0.073-0.427 0.197-0.592l-0.002 0.003c0.115-0.139 0.288-0.227 0.481-0.227 0.006 0 0.011 0 0.017 0l-0.001-0c0.149 0.001 0.291 0.023 0.426 0.064l-0.011-0.003v-0.672c-0.132-0.036-0.283-0.056-0.44-0.056-0.005 0-0.010 0-0.016 0h0.001zM15.095 14.037c-0.017-0.001-0.036-0.001-0.056-0.001-0.335 0-0.636 0.147-0.842 0.381l-0.001 0.001c-0.202 0.266-0.324 0.602-0.324 0.967 0 0.037 0.001 0.073 0.004 0.109l-0-0.005c-0.002 0.035-0.004 0.075-0.004 0.116 0 0.382 0.121 0.735 0.328 1.023l-0.004-0.005c0.208 0.244 0.516 0.398 0.860 0.398 0.025 0 0.050-0.001 0.075-0.002l-0.003 0c0.018 0.001 0.040 0.002 0.061 0.002 0.341 0 0.645-0.154 0.849-0.395l0.001-0.002c0.202-0.278 0.324-0.625 0.324-1.002 0-0.036-0.001-0.073-0.003-0.109l0 0.005c0.002-0.032 0.003-0.069 0.003-0.106 0-0.374-0.123-0.72-0.332-0.998l0.003 0.004c-0.216-0.236-0.525-0.383-0.868-0.383-0.025 0-0.050 0.001-0.074 0.002l0.003-0zM9.541 13.979c0.080 0 0.158 0.009 0.232 0.026l-0.007-0.001c0.288 0.055 0.526 0.234 0.661 0.478l0.002 0.005c0.127 0.221 0.201 0.485 0.201 0.768 0 0.018-0 0.036-0.001 0.054l0-0.003c0 0.006 0 0.013 0 0.021 0 0.427-0.121 0.827-0.33 1.166l0.005-0.010c-0.182 0.366-0.549 0.616-0.976 0.626l-0.001 0c-0.081-0.002-0.158-0.011-0.233-0.029l0.007 0.001c-0.288-0.055-0.527-0.233-0.662-0.476l-0.002-0.005c-0.126-0.225-0.201-0.493-0.201-0.779 0-0.016 0-0.032 0.001-0.048l-0 0.002c-0-0.006-0-0.013-0-0.021 0-0.426 0.121-0.824 0.331-1.162l-0.005 0.009c0.183-0.365 0.549-0.613 0.975-0.623l0.001-0zM6.933 13.979c0.080 0 0.158 0.009 0.232 0.026l-0.007-0.001c0.288 0.057 0.525 0.235 0.661 0.478l0.003 0.005c0.127 0.221 0.202 0.487 0.202 0.770 0 0.017-0 0.034-0.001 0.051l0-0.002c0 0.005 0 0.012 0 0.018 0 0.428-0.121 0.829-0.331 1.168l0.005-0.010c-0.182 0.366-0.549 0.616-0.976 0.626l-0.001 0c-0.081-0.002-0.158-0.011-0.233-0.029l0.007 0.001c-0.288-0.055-0.527-0.233-0.662-0.476l-0.003-0.005c-0.125-0.224-0.199-0.491-0.199-0.775 0-0.018 0-0.035 0.001-0.053l-0 0.003c-0-0.008-0-0.016-0-0.025 0-0.424 0.12-0.821 0.329-1.157l-0.005 0.009c0.183-0.365 0.549-0.613 0.975-0.623l0.001-0z" fill="#FFF"/></svg>
+          </div>
+          <div class="platform-badge">
+            <svg class="logo-wide" viewBox="0 302.1 612 192"><path fill="#95BF47" d="M131.5 341.9c-.1-.9-.9-1.3-1.5-1.3s-13.7-1-13.7-1-9.1-9.1-10.2-10c-1-1-2.9-.7-3.7-.5-.1 0-2 .6-5.1 1.6-3.1-8.9-8.4-17-17.9-17h-.9c-2.6-3.4-6-5-8.8-5-22 0-32.6 27.5-35.9 41.5-8.6 2.7-14.7 4.5-15.4 4.8-4.8 1.5-4.9 1.6-5.5 6.1-.5 3.4-13 100.1-13 100.1l97.3 18.2L150 468c.1-.2-18.4-125.2-18.5-126.1zm-39.6-9.8c-2.4.7-5.3 1.6-8.2 2.6v-1.8c0-5.4-.7-9.8-2-13.3 5 .6 8.1 6.1 10.2 12.5zm-16.3-11.4c1.3 3.4 2.2 8.2 2.2 14.8v1c-5.4 1.7-11.1 3.4-17 5.3 3.3-12.6 9.6-18.8 14.8-21.1zm-6.4-6.2c1 0 2 .4 2.8 1-7.1 3.3-14.6 11.6-17.7 28.4-4.7 1.5-9.2 2.8-13.5 4.2 3.6-12.8 12.6-33.6 28.4-33.6z"/><path fill="#5E8E3E" d="M130 340.4c-.6 0-13.7-1-13.7-1s-9.1-9.1-10.2-10c-.4-.4-.9-.6-1.3-.6l-7.3 150.6 52.8-11.4s-18.5-125.2-18.6-126.1c-.4-.9-1.1-1.3-1.7-1.5z"/><path fill="#FFF" d="M79.4 369.6L73 388.9s-5.8-3.1-12.7-3.1c-10.3 0-10.8 6.5-10.8 8.1 0 8.8 23 12.2 23 32.9 0 16.3-10.3 26.8-24.2 26.8-16.8 0-25.2-10.4-25.2-10.4l4.5-14.8s8.8 7.6 16.2 7.6c4.9 0 6.9-3.8 6.9-6.6 0-11.5-18.8-12-18.8-31 0-15.9 11.4-31.3 34.5-31.3 8.6-.1 13 2.5 13 2.5z"/><path fill="#FFF" d="M211.6 405.9c-5.3-2.8-8-5.3-8-8.6 0-4.2 3.8-6.9 9.7-6.9 6.9 0 13 2.8 13 2.8l4.8-14.7s-4.4-3.4-17.4-3.4c-18.1 0-30.7 10.4-30.7 25 0 8.3 5.9 14.6 13.7 19.1 6.4 3.5 8.6 6.1 8.6 9.9 0 3.9-3.2 7.1-9.1 7.1-8.7 0-17-4.5-17-4.5l-5.1 14.7s7.6 5.1 20.4 5.1c18.6 0 32.1-9.2 32.1-25.7-.2-9-6.9-15.2-15-19.9zM285.8 374.9c-9.2 0-16.4 4.4-21.9 11l-.2-.1 8-41.6H251l-20.2 106h20.7l6.9-36.2c2.7-13.7 9.8-22.2 16.4-22.2 4.7 0 6.5 3.2 6.5 7.7 0 2.8-.2 6.4-.9 9.2l-7.8 41.5h20.7l8.1-42.8c.9-4.5 1.5-9.9 1.5-13.6-.1-11.9-6.2-18.9-17.1-18.9zM349.7 374.9c-25 0-41.5 22.5-41.5 47.6 0 16 9.9 29 28.5 29 24.5 0 41-21.9 41-47.6.1-14.9-8.5-29-28-29zm-10.2 60.8c-7.1 0-10-6-10-13.6 0-11.9 6.1-31.2 17.4-31.2 7.3 0 9.8 6.4 9.8 12.5 0 12.7-6.3 32.3-17.2 32.3zM430.8 374.9c-14 0-21.9 12.4-21.9 12.4h-.2l1.2-11.1h-18.4c-.9 7.5-2.6 19-4.2 27.5L373 479.6h20.7l5.8-30.7h.5s4.3 2.7 12.1 2.7c24.4 0 40.3-25 40.3-50.2-.1-14-6.4-26.5-21.6-26.5zm-19.8 61c-5.4 0-8.6-3.1-8.6-3.1l3.4-19.3c2.4-13 9.2-21.5 16.4-21.5 6.4 0 8.3 5.9 8.3 11.4.1 13.4-7.9 32.5-19.5 32.5zM481.9 345.2c-6.6 0-11.9 5.3-11.9 12 0 6.1 3.9 10.4 9.8 10.4h.2c6.5 0 12-4.4 12.1-12 .1-6.1-4-10.4-10.2-10.4zM452.9 450.1h20.7l14-73.6h-20.8M540.4 376.4H526l.7-3.4c1.2-7.1 5.4-13.3 12.4-13.3 3.7 0 6.6 1.1 6.6 1.1l4-16.3s-3.5-1.8-11.3-1.8c-7.3 0-14.7 2.1-20.3 6.9-7.1 6-10.4 14.7-12 23.5l-.6 3.4h-9.7l-3.1 15.7h9.7l-11 58h20.7l11-58h14.3l3-15.8zM590.3 376.5s-13 32.7-18.7 50.6h-.2c-.4-5.8-5.1-50.6-5.1-50.6h-21.8l12.5 67.4c.2 1.5.1 2.4-.5 3.4-2.4 4.7-6.5 9.2-11.3 12.5-3.9 2.8-8.3 4.7-11.8 5.9l5.8 17.6c4.2-.9 13-4.4 20.3-11.3 9.4-8.8 18.2-22.5 27.2-41.1l25.3-54.5h-21.7z"/></svg>
+          </div>
+          <div class="platform-badge">
+            <svg class="logo-wide" viewBox="0 0 540 122.524"><g><path d="M313.19 48.227h-21.257v2.255c6.649 0 7.718 1.425 7.718 9.856V75.54c0 8.431-1.067 9.976-7.718 9.976-5.104-.713-8.55-3.444-13.3-8.67l-5.462-5.937c7.361-1.308 11.28-5.938 11.28-11.164 0-6.53-5.58-11.518-16.031-11.518h-20.9v2.255c6.649 0 7.718 1.425 7.718 9.856V75.54c0 8.431-1.068 9.976-7.718 9.976v2.256h23.631v-2.256c-6.648 0-7.718-1.545-7.718-9.976v-4.273h2.019l13.182 16.505h34.557c16.981 0 24.345-9.024 24.345-19.832-.002-10.807-7.364-19.713-24.346-19.713zm-49.756 19.355V51.79h4.868c5.343 0 7.719 3.681 7.719 7.956 0 4.157-2.376 7.837-7.719 7.837zm50.113 16.508h-.832c-4.274 0-4.868-1.067-4.868-6.53V51.79h5.7c12.35 0 14.604 9.024 14.604 16.031.001 7.243-2.255 16.269-14.604 16.269zM181.378 71.978l8.193-24.228c2.376-7.006 1.308-9.023-6.293-9.023v-2.376h22.325v2.376c-7.48 0-9.262 1.78-12.23 10.449L179.834 89.79h-1.543l-12.114-37.17-12.349 37.17h-1.545l-13.181-40.613c-2.85-8.669-4.75-10.449-11.638-10.449v-2.376h26.363v2.376c-7.008 0-8.908 1.662-6.413 9.023l7.956 24.228 11.993-35.627h2.258zm40.374 17.336c-13.062 0-23.75-9.618-23.75-21.376 0-11.638 10.688-21.257 23.75-21.257s23.75 9.619 23.75 21.257c0 11.758-10.687 21.376-23.75 21.376zm0-38.949c-10.924 0-14.726 9.854-14.726 17.574 0 7.839 3.802 17.576 14.726 17.576 11.045 0 14.845-9.737 14.845-17.576 0-7.72-3.8-17.574-14.845-17.574z" fill="#FFF"/><path d="M366.864 85.396v2.375H339.67v-2.375c7.957 0 9.382-2.019 9.382-13.896V52.502c0-11.877-1.425-13.775-9.382-13.775V36.35h24.581c12.23 0 19.002 6.294 19.002 14.727 0 8.194-6.771 14.606-19.002 14.606h-6.77V71.5c.001 11.878 1.425 13.896 9.383 13.896zm-2.613-44.771h-6.77v20.664h6.77c6.65 0 9.737-4.631 9.737-10.212.001-5.7-3.086-10.452-9.737-10.452zm100.582 35.984l-.595 2.137c-1.067 3.919-2.376 5.344-10.807 5.344h-1.663c-6.174 0-7.243-1.425-7.243-9.855v-5.462c9.263 0 9.976.83 9.976 7.006h2.257V58.083h-2.257c0 6.175-.713 7.006-9.976 7.006V51.79h6.53c8.433 0 9.738 1.425 10.807 5.344l.596 2.256h1.898l-.83-11.162h-34.914v2.255c6.649 0 7.719 1.425 7.719 9.856V75.54c0 7.713-.907 9.656-6.15 9.934-4.983-.762-8.404-3.479-13.085-8.628l-5.463-5.937c7.363-1.308 11.282-5.938 11.282-11.164 0-6.53-5.581-11.518-16.031-11.518h-20.9v2.255c6.649 0 7.719 1.425 7.719 9.856V75.54c0 8.431-1.068 9.976-7.719 9.976v2.256h23.632v-2.256c-6.648 0-7.719-1.545-7.719-9.976v-4.273h2.02l13.181 16.505h48.806l.713-11.161zm-62.937-9.027V51.79h4.868c5.344 0 7.72 3.681 7.72 7.956 0 4.157-2.376 7.837-7.72 7.837zm87.043 21.732c-4.75 0-8.907-2.493-10.688-4.038-.595.595-1.662 2.376-1.899 4.038h-2.257V72.927h2.375c.951 7.838 6.412 12.469 13.419 12.469 3.8 0 6.888-2.138 6.888-5.699 0-3.087-2.73-5.463-7.6-7.719l-6.77-3.206c-4.751-2.258-8.312-6.178-8.312-11.401 0-5.7 5.344-10.568 12.707-10.568 3.919 0 7.243 1.426 9.263 3.088.593-.476 1.188-1.782 1.544-3.208h2.256v14.014h-2.494c-.832-5.582-3.919-10.213-10.212-10.213-3.325 0-6.413 1.899-6.413 4.87 0 3.087 2.493 4.749 8.194 7.361l6.53 3.206c5.701 2.731 7.956 7.127 7.956 10.689 0 7.48-6.531 12.704-14.487 12.704zm36.575 0c-4.751 0-8.908-2.493-10.688-4.038-.594.595-1.662 2.376-1.898 4.038h-2.257V72.927h2.375c.95 7.838 6.411 12.469 13.419 12.469 3.8 0 6.888-2.138 6.888-5.699 0-3.087-2.731-5.463-7.601-7.719l-6.77-3.206c-4.75-2.258-8.312-6.178-8.312-11.401 0-5.7 5.344-10.568 12.707-10.568 3.919 0 7.242 1.426 9.263 3.088.593-.476 1.187-1.782 1.542-3.208h2.257v14.014h-2.493c-.832-5.582-3.919-10.213-10.212-10.213-3.325 0-6.414 1.899-6.414 4.87 0 3.087 2.494 4.749 8.195 7.361l6.53 3.206c5.7 2.731 7.955 7.127 7.955 10.689 0 7.48-6.531 12.704-14.486 12.704z" fill="#FFF"/><g fill="#FFF"><path d="M8.708 61.26c0 20.803 12.089 38.779 29.619 47.299L13.258 39.872a52.354 52.354 0 0 0-4.55 21.388zm88.032-2.652c0-6.495-2.333-10.993-4.334-14.494-2.664-4.329-5.16-7.995-5.16-12.324 0-4.831 3.663-9.328 8.824-9.328.233 0 .454.029.682.042-9.351-8.566-21.808-13.796-35.49-13.796-18.36 0-34.513 9.42-43.91 23.688 1.233.037 2.396.062 3.382.062 5.497 0 14.006-.667 14.006-.667 2.833-.167 3.167 3.994.338 4.329 0 0-2.848.335-6.016.501L48.2 93.546l11.502-34.493-8.189-22.433c-2.83-.166-5.511-.501-5.511-.501-2.832-.166-2.5-4.496.332-4.329 0 0 8.679.667 13.843.667 5.496 0 14.006-.667 14.006-.667 2.835-.167 3.168 3.994.337 4.329 0 0-2.853.335-6.015.501l18.992 56.494 5.241-17.517c2.273-7.269 4.002-12.49 4.002-16.989z"/><path d="M62.184 65.857l-15.768 45.818a52.516 52.516 0 0 0 14.846 2.142c6.12 0 11.989-1.059 17.452-2.979a4.451 4.451 0 0 1-.374-.724zm45.192-29.811c.226 1.674.354 3.472.354 5.404 0 5.333-.996 11.328-3.996 18.824l-16.053 46.413c15.624-9.111 26.133-26.038 26.133-45.427a52.268 52.268 0 0 0-6.438-25.214z"/><path d="M61.262 0C27.483 0 0 27.481 0 61.26c0 33.783 27.482 61.264 61.262 61.264 33.778 0 61.265-27.48 61.265-61.264C122.526 27.481 95.04 0 61.262 0zm0 119.715c-32.23 0-58.453-26.223-58.453-58.455 0-32.229 26.222-58.45 58.453-58.45 32.229 0 58.45 26.221 58.45 58.45 0 32.232-26.222 58.455-58.45 58.455z"/></g></g></svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ DIVIDER ═══ -->
+    <div class="section-divider container"></div>
+
+    <!-- ═══ FEATURES ═══ -->
+    <section id="plugins" class="container" style="margin-bottom: var(--section-gap);">
+      <h2 class="section-title reveal">Powerful Plugins for Your Store</h2>
+      <div class="features-grid">
+
+        <!-- Card 1: Checkout Booster Pro -->
+        <div class="feature-card reveal d1">
+          <h4>Blazing Fast</h4>
+          <p class="desc">Optimized for performance &amp; speed.</p>
+          <div class="screenshot">
+            <div class="mock-plugin">
+              <div class="mock-sidebar">
+                <div class="mock-title"></div>
+                <div class="mock-subtitle"></div>
+                <div class="mock-subtitle" style="width:80%"></div>
+                <div class="mock-subtitle" style="width:60%"></div>
+                <div class="mock-btn cyan"></div>
+                <div style="flex:1"></div>
+                <div class="mock-subtitle" style="width:70%"></div>
+                <div class="mock-subtitle" style="width:50%"></div>
+              </div>
+              <div class="mock-main">
+                <div class="mock-row" style="width:70%"></div>
+                <div class="mock-row" style="width:90%"></div>
+                <div class="mock-block"></div>
+                <div class="mock-row" style="width:60%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="plugin-name">Checkout Booster Pro</div>
+          <div class="price">$49</div>
+          <a href="#" class="btn-buy">Buy Now</a>
+        </div>
+
+        <!-- Card 2: Urgency Countdown -->
+        <div class="feature-card reveal d2">
+          <h4>Conversion Boost</h4>
+          <p class="desc">Increase sales with smart UX plugins</p>
+          <div class="screenshot">
+            <div class="mock-plugin">
+              <div class="mock-sidebar">
+                <div class="mock-title"></div>
+                <div class="mock-subtitle"></div>
+                <div class="mock-subtitle" style="width:90%"></div>
+                <div class="mock-subtitle" style="width:55%"></div>
+                <div class="mock-btn magenta"></div>
+                <div style="flex:1"></div>
+                <div class="mock-subtitle" style="width:65%"></div>
+                <div class="mock-subtitle" style="width:45%"></div>
+              </div>
+              <div class="mock-main">
+                <div class="mock-row" style="width:85%"></div>
+                <div class="mock-row" style="width:60%"></div>
+                <div class="mock-block"></div>
+                <div class="mock-row" style="width:75%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="plugin-name">Urgency Countdown</div>
+          <div class="price">$39</div>
+          <a href="#" class="btn-buy">Buy Now</a>
+        </div>
+
+        <!-- Card 3: Sticky Add-to-Cart Pro -->
+        <div class="feature-card reveal d3">
+          <h4>Plug &amp; Play</h4>
+          <p class="desc">Install in seconds, no coding needed.</p>
+          <div class="screenshot">
+            <div class="mock-plugin">
+              <div class="mock-sidebar">
+                <div class="mock-title"></div>
+                <div class="mock-subtitle"></div>
+                <div class="mock-subtitle" style="width:75%"></div>
+                <div class="mock-subtitle" style="width:85%"></div>
+                <div class="mock-btn purple"></div>
+                <div style="flex:1"></div>
+                <div class="mock-subtitle" style="width:60%"></div>
+                <div class="mock-subtitle" style="width:80%"></div>
+              </div>
+              <div class="mock-main">
+                <div class="mock-row" style="width:80%"></div>
+                <div class="mock-row" style="width:55%"></div>
+                <div class="mock-block"></div>
+                <div class="mock-row" style="width:65%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="plugin-name">Sticky Add-to-Cart Pro</div>
+          <div class="price">$29</div>
+          <a href="#" class="btn-buy">Buy Now</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══ DIVIDER ═══ -->
+    <div class="section-divider container"></div>
+
+    <!-- ═══ PRICING ═══ -->
+    <section id="pricing" class="container pricing-section">
+      <h2 class="section-title reveal">Simple, Transparent Pricing</h2>
+      <div class="pricing-grid">
+
+        <div class="pricing-card reveal d1">
+          <div class="tier-name">Starter</div>
+          <div class="tier-price">$29</div>
+          <div class="tier-period">one-time payment</div>
+          <ul class="tier-features">
+            <li>1 plugin license</li>
+            <li>1 site activation</li>
+            <li>6 months updates</li>
+            <li>Community support</li>
+          </ul>
+          <a href="#" class="btn-tier">Get Started</a>
+        </div>
+
+        <div class="pricing-card featured reveal d2">
+          <div class="tier-name">Pro</div>
+          <div class="tier-price">$79</div>
+          <div class="tier-period">one-time payment</div>
+          <ul class="tier-features">
+            <li>3 plugin licenses</li>
+            <li>5 site activations</li>
+            <li>12 months updates</li>
+            <li>Priority support</li>
+            <li>Early access features</li>
+          </ul>
+          <a href="#" class="btn-tier primary">Get Pro</a>
+        </div>
+
+        <div class="pricing-card reveal d3">
+          <div class="tier-name">Agency</div>
+          <div class="tier-price">$199</div>
+          <div class="tier-period">one-time payment</div>
+          <ul class="tier-features">
+            <li>All plugins included</li>
+            <li>Unlimited activations</li>
+            <li>Lifetime updates</li>
+            <li>Dedicated support</li>
+            <li>White-label option</li>
+            <li>Custom integrations</li>
+          </ul>
+          <a href="#" class="btn-tier">Go Agency</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="/src/img/logo.png" alt="XtremePlugins" />
+        </div>
+        <div class="footer-nav">
+          <div class="footer-nav-row">
+            <a href="#plugins">Plugins</a>
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#faq">FAQ</a>
+            <a href="#blog">Blog</a>
+          </div>
+          <div class="footer-nav-row">
+            <a href="#">Support</a>
+            <a href="#">Docs</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copy">&copy; 2026 XtremePlugins. All rights reserved.</div>
+    </footer>
+
+  </div>
+
+  <script>
+    // Stars
+    const sc = document.getElementById('stars');
+    for (let i = 0; i < 80; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      const sz = Math.random() * 2 + 0.5;
+      s.style.cssText = `width:${sz}px;height:${sz}px;top:${Math.random()*100}%;left:${Math.random()*100}%;animation-duration:${Math.random()*3+2}s;animation-delay:${Math.random()*4}s;`;
+      sc.appendChild(s);
+    }
+
+    // Scroll reveal
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
