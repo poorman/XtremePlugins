@@ -19,7 +19,7 @@ export default function WarpBackground() {
   }, []);
 
   return (
-    <div className="fixed inset-0 z-0 overflow-hidden" style={{ background: `url('/src/img/background.png') center center / cover no-repeat, radial-gradient(ellipse at 50% 40%, #1a0040 0%, #0d0021 50%, #050010 100%)` }}>
+    <div className="fixed inset-0 z-0 overflow-hidden" style={{ background: 'radial-gradient(ellipse at 50% 40%, #1a0040 0%, #0d0021 50%, #050010 100%)' }}>
       {/* Streaks layer 1 */}
       <div
         className="absolute"

@@ -5,14 +5,14 @@ const mainLinks = [
   { label: 'Plugins', href: '/plugins' },
   { label: 'Pricing', href: '/pricing' },
   { label: 'Blog', href: '/blog' },
-  { label: 'FAQ', href: '#faq' },
+  { label: 'FAQ', href: '/faq' },
 ];
 
 const secondaryLinks = [
-  { label: 'Support', href: '#' },
-  { label: 'Docs', href: '#' },
-  { label: 'Terms of Service', href: '#' },
-  { label: 'Privacy Policy', href: '#' },
+  { label: 'Support', href: '/support' },
+  { label: 'Docs', href: '/docs' },
+  { label: 'Terms of Service', href: '/terms' },
+  { label: 'Privacy Policy', href: '/privacy' },
 ];
 
 export default function Footer() {

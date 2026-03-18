@@ -21,7 +21,7 @@ export default function PricingCard({ name, price, period, features, featured = 
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120px] h-0.5 bg-gradient-to-r from-transparent via-cyan to-transparent" />
       )}
       <div className="font-display text-xs font-semibold uppercase tracking-[0.15em] text-white/60 mb-3">{name}</div>
-      <div className="font-display text-4xl font-black text-gradient mb-2">${price}</div>
+      <div className="font-body text-[2.8rem] font-bold text-white mb-2">${price}</div>
       <div className="text-xs text-white/60 mb-6">{period}</div>
       <ul className="text-left mb-7">
         {features.map((f) => (

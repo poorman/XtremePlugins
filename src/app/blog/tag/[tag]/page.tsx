@@ -1,7 +1,7 @@
 import { getPostsByTag } from '@/lib/ghost';
 import BlogPostCard from '@/components/BlogPostCard';
 
-export const revalidate = 3600;
+export const dynamic = 'force-dynamic';
 
 export default async function TagPage({ params }: { params: { tag: string } }) {
   let posts: Awaited<ReturnType<typeof getPostsByTag>> | null = null;

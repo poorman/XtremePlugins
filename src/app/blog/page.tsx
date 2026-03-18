@@ -1,7 +1,7 @@
 import { getPosts } from '@/lib/ghost';
 import BlogPostCard from '@/components/BlogPostCard';
 
-export const revalidate = 3600;
+export const dynamic = 'force-dynamic';
 
 export const metadata = {
   title: 'Blog — XtremePlugins',
